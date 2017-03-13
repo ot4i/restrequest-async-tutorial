@@ -43,7 +43,7 @@
   </div>
   <div class="row">
     <div class="small-9 medium-9 large-9 columns">
-      <h4>Asynchronous REST Request and REST Response Nodes</h4>
+      <h4>Call a REST API using the RESTAsyncRequest node</h4>
     </div>
     <div class="small-3 medium-3 large-3 columns"> 
       <!--a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm');" class="small right helplink">IBM Knowledge Center</a-->
@@ -52,7 +52,7 @@
   <hr>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h5> Learn how to use a RESTAsyncRequest and RESTAsyncResponse nodes to call a REST API in an IBM Integration Bus message flow and retrieve the response. </h5>
+      <h5> Learn how to use a RESTAsyncRequest node to call a REST API and a RESTAsyncResponse node to receive the response. </h5>
     </div>
   </div>
   <div class="row content-details">
@@ -63,9 +63,9 @@
       <div class="row">
       
         
-        <p> This tutorial demonstrates how a RESTAsyncRequest and RESTAsyncResponse nodes can be used to call REST APIs and retrieve returned data in IBM Integration Bus. A simple application has been created, which contains two message flows. The first message flow receives XML data over HTTP (using HTTPInput node). The XML data is parsed and passed to an asynchronous REST Request Node, which uses the received parameter to call a REST API. The RESTAsyncRequest Node&#39;s properties specify where the REST API is running (in this tutorial this will be your localhost), the Request parameter and various other settings. The REST API has an implemented GET operation, where a graphical data mapping node is used to &#39;retrieve&#39; a User based on the input data and replies back. A RESTAsyncResponse node in the second message flow receives the REST API response and transmits it to the HTTPReply node. </p>
+        <p> This tutorial demonstrates how a RESTAsyncRequest node and a RESTAsyncResponse node can be used to call a REST API and receive the response back asynchronously on a separate thread. A simple application has been created, which contains two message flows. The first flow receives XML data over HTTP (using an HTTPInput node). The XML data is parsed and passed to a RESTAsyncRequest node. The RESTAsyncRequest node&#39;s properties specify where the REST API is running (in this tutorial this will be your localhost), and the Request parameter to send. The REST API implements a GET operation, in which a graphical data mapping node is used to &#39;retrieve&#39; information (actually the values are hard coded in a map) about a user based on the input data. A RESTAsyncResponse node in the second message flow receives the REST API response and transmits it to the HTTPReply node. </p>
       
-        <p> In IBM Integration Bus, an application is a container for all the resources that are required to create a solution. An application can contain IBM Integration Bus resources, such as flows, message definitions, libraries, and JAR files. In this tutorial, an application is used to hold the message flows which contains the asynchronous RESTRequest nodes. In addition, a Shared Library is used, which contains resources that can be used by different applications. In this tutorial, the Application references the Shared Library, which contains schema definition and the swagger file which describes the REST API. IBM Integration Bus has first-class support for building your own REST APIs. </p>
+        <p> In IBM Integration Bus, an application is a container for all the resources that are required to create a solution. An application can contain IBM Integration Bus resources, such as flows, message definitions, libraries, and JAR files. In this tutorial, an application is used to hold the message flow which contains the RESTRequest node. A referenced shared Library is used, to hold an XML schema to describe the input data and a Swagger file to describe the interface of the REST API which is invoked. </p>
       
       </div>	  
 		<!-- help links do not work in details page for GA 
@@ -117,13 +117,11 @@
           <ul>
             
             
-              <li>Asynchronous REST Request and REST Response Nodes</li>
+              <li>RESTAsyncRequest node</li>
             
-              <li>Calling a REST API using RESTAsyncRequest node</li>
+              <li>Calling a REST API using the RESTAsyncRequest node</li>
             
-              <li>Retrieving REST API response using RESTAsyncResponse node</li>
-            
-              <li>Transformation using graphical data mapping to implement REST API operation</li>
+              <li>Transformation using graphical data mapping</li>
             
           </ul>
         </div>
@@ -132,7 +130,7 @@
           <ul>
           
           
-            <li>Understanding of how to use Asynchronous REST Request and REST Response Nodes in IBM Integration Bus.</li>
+            <li>Understand how to use the RESTAsyncRequest Node to call a REST API.</li>
           
           </ul>
         </div>
