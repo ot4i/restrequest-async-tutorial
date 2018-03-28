@@ -215,11 +215,11 @@
 					"heading": "Test the message flow to complete the tutorial",
 					"_runComment": "",
 					"sections": [{
-						"section": "Test the <b>RESTRequest_Client</b> message flow by sending it data using an HTTP client such as cURL:",
+						"section": "Test the <b>RESTAsyncRequest_Client</b> message flow by sending it data using an HTTP client such as cURL:",
 						"steps": {
 							"type": "ordered",
 							"details": [{
-									"details": "<code>cd C:\\workspace</code><br> where <b>C:\\workspace</b> is the location of your Toolkit Eclipse workspace directory on the filesystem.<br><code>curl -X POST http://localhost:7800/REST/getUser -d @.\\RESTRequest_client\\input1.xml</code>"
+									"details": "<code>cd C:\\workspace</code><br> where <b>C:\\workspace</b> is the location of your Toolkit Eclipse workspace directory on the filesystem.<br><code>curl -X POST http://localhost:7800/REST/getUser -d @.\\RESTAsyncRequest_client\\input1.xml</code>"
 								},
 								{
 									"details": "The input XML message structure looks like this:<br><b>&lt;User&gt;&lt;UserNumber&gt;1&lt;/UserNumber&gt;&lt;/User&gt;"
